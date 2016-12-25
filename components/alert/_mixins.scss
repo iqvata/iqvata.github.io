@@ -1,0 +1,6 @@
+// Alert mixin
+@mixin alert-variant($background-color, $border-color, $text-color) {
+	background-color: $background-color;
+	border-color: $border-color;
+  	color: $text-color;
+}

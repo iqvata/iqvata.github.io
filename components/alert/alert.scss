@@ -1,0 +1,51 @@
+@import "mixins.scss";
+
+// Variables
+$color-success:		      #7be4a5 !global;
+$color-danger:		      #f44e4e !global;
+$color-info:		      #78ccf6 !global;
+$color-warning:		      #f3dc62 !global;
+
+$alert-success-bg:            lighten($color-success, 20%) !global;
+$alert-success-text:          darken($color-success, 25%) !global;
+$alert-success-border:        darken($color-success, 5%) !global;
+
+$alert-danger-bg:             lighten($color-danger, 20%) !global;
+$alert-danger-text:           darken($color-danger, 25%) !global;
+$alert-danger-border:         darken($color-danger, 5%) !global;
+
+$alert-info-bg:               lighten($color-info, 20%) !global;
+$alert-info-text:             darken($color-info, 25%) !global;
+$alert-info-border:           darken($color-info, 5%) !global;
+
+$alert-warning-bg:            lighten($color-warning, 20%) !global;
+$alert-warning-text:          darken($color-warning, 25%) !global;
+$alert-warning-border:        darken($color-warning, 5%) !global;
+
+// .alert
+.alert {
+	border: 1px solid transparent;
+	margin-bottom: 1em;
+	padding: 1em 1.5em;
+	position: relative;
+
+	// .alert--succes
+	&--success {
+		@include alert-variant($alert-success-bg, $alert-success-border, $alert-success-text);
+	}
+
+	// .alert--danger
+	&--danger {
+		@include alert-variant($alert-danger-bg, $alert-danger-border, $alert-danger-text);
+	}
+
+	// .alert--info
+	&--info {
+		@include alert-variant($alert-info-bg, $alert-info-border, $alert-info-text);
+	}
+
+	// .alert--warning
+	&--warning {
+		@include alert-variant($alert-warning-bg, $alert-warning-border, $alert-warning-text);
+	}
+}
